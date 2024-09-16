@@ -1,0 +1,123 @@
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Logo */
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  .logo {
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Animation for Open (Cross) Menu */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    opacity: 0;
+  }
+  
+  /* Navigation Links (Mobile View) */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px; /* Small margin from the right */
+    background-color: #333;
+    flex-direction: column;
+    align-items: flex-end; /* Align to right */
+    width: 100px;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    text-align: right; /* Align text to right */
+    width: 100%;
+  }
+  
+  .nav-links a:hover {
+    color: #4CAF50;
+  }
+  
+  /* Show Hamburger Icon on Mobile */
+  @media (max-width: 768.99px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  
+  /* Navigation Links (Desktop View) */
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+      align-items: center;
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+    }
+  
+    .nav-links a {
+      text-align: center;
+      width: 100px;
+    }
+  }
+  

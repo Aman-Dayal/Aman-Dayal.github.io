@@ -1,0 +1,103 @@
+.about-container {
+  color: #fff;
+  background-color: #1e1e1e;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+}
+
+.highlight {
+  color: #00bfff;
+}
+
+.skills-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Horizontal Scroll for Skills */
+.skills-grid {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #333;
+  gap: 15px;
+}
+
+.skills-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-grid::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.skills-grid::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+/* Skill Card Style */
+.skill-card {
+  min-width: 150px;
+  text-align: center;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+.skill-icon {
+  font-size: 3em;
+  color: #00bfff;
+}
+
+.skill-hover {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ddd;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-card:hover .skill-hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Summary Section */
+.summary-section {
+  text-align: center;
+}
+
+.summary-section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
